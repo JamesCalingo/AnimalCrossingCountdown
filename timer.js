@@ -1,3 +1,9 @@
-const announcement = moment("20180918", "YYYYMMDD").fromNow();
-const release = moment("20200320", "YYYYMMDD").fromNow();
-$(".main").html(`Animal Crossing: New Horizons was announced over ${announcement} and comes out ${release}!`)
+const currentTime = moment()
+const announcement = moment("20180918", "YYYYMMDD")
+const announcementTime = currentTime.diff(announcement, "months")
+const release = moment("20200320", "YYYYMMDD").diff(currentTime, "hours");
+const countdown = moment().endOf('day').fromNow();
+$(".main").html(`<h2>Dawn of</h2>
+<h1>The Final Day</h1>
+<p>(Until Animal Crossing: New Horizons)</p>
+<h3>-${release} hours Remain-</h3>`);
