@@ -1,4 +1,4 @@
-
+// This file contains everything pertaining to Wilbur. These arrays are the various diologue options he has
 
 const actions = ["eating spicy food", "flamenco dancing", "collecting stamps", "surfing the web", "fixing things", "window shopping", "woodworking", "collecting figurines", "reading fortunes", "making playlists", "watching movies", "learning languages", "taking long naps", "watching trash TV", "practicing kung fu", "growing vegetables", "eating free pizza", "making mosaics", "bungee jumping", "clipping coupons", "watching trains", "scrapbooking", "doing brainteasers", "building models", "learning new stuff", "reading novels"];
 
