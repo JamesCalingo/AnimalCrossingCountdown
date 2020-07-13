@@ -3,13 +3,15 @@
 const actions = ["eating spicy food", "flamenco dancing", "collecting stamps", "surfing the web", "fixing things", "window shopping", "woodworking", "collecting figurines", "reading fortunes", "making playlists", "watching movies", "learning languages", "taking long naps", "watching trash TV", "practicing kung fu", "growing vegetables", "eating free pizza", "making mosaics", "bungee jumping", "clipping coupons", "watching trains", "scrapbooking", "doing brainteasers", "building models", "learning new stuff", "reading novels"];
 
 const places = ["toothbrush", "glasses case", "pocketbook", "microphone", "photo album", "microscope", "hand mirror", "change jar", "fitted sheet", "leg warmer", "blue crayon", "calculator", "saltshaker", "electric razor", "jewelry box", "ballpoint pen", "inkjet printer", "jackhammer", 
-"beach towel", "pencil case", "pack of gum", "glockenspiel", "kaleidoscope", "rubber band", "water bottle", "compost bin", "cotton swab", "toaster oven", "wristwatch", "mountain bike", "blowtorch", "tambourine", "picnic basket", "stethoscope", "paperweight", "pocketknife", "screwdriver", "pomade tin", "camera case", "water wing"];
+"beach towel", "pencil case", "pack of gum", "glockenspiel", "kaleidoscope", "rubber band", "water bottle", "compost bin", "cotton swab", "toaster oven", "wristwatch", "mountain bike", "blowtorch", "tambourine", "picnic basket", "stethoscope", "paperweight", "pocketknife", "screwdriver", "pomade tin", "camera case", "water wing", "baking sheet", "space heater"];
 
 const sweets = ["almond jelly", "gingerbread", "shaved ice", "cotton candy", "apple cobbler", "fried dough", "Bavarian cream", "rainbow sherbet", "key-lime pie", "apple cake", "peach cobbler", "tarte tatin", "crème brûlée", "coffee cake", "pumpkin pie", "coconut cream pie", "peanut brittle", "cheesecake", "spice cake", "fried ice cream", "bread pudding", "figgy pudding", "vanilla gelato", "banana bread", "apple strudel", "sponge cake", "rice pudding", "raisin bread", "mint ice cream", "lime sherbet", "blueberry pie", "bûche de Noël", "lemon sorbet"];
 
 const activities = ["hula dancing", "golf", "tap dancing", "cricket", "badminton", "archery", "muay thai", "arm wrestling", "wrestling", "power lifting", "hockey", "step aerobics", "kung fu", "boxing", "water skiing", "basketball", "soccer", "racquetball", "swimming", "football", "bodybuilding", "rugby", "hot yoga", "ice skating", "curling", "baseball", "canoeing", "karate", "bocce", "bowling", "volleyball", "surfing"];
 
-const musicStyles = ["rock", "salsa", "synthpop", "blues", "punk", "hip-hop", "disco", "doo-wop", "J-pop", "tango", "electronica", "reggae", "samba", "bebop", "bluegrass", "dubstep", "rockabilly", "cabaret", "karaoke"];
+const musicStyles = ["rock", "salsa", "synthpop", "blues", "punk", "hip-hop", "disco", "doo-wop", "J-pop", "tango", "electronica", "reggae", "samba", "bebop", "bluegrass", "dubstep", "rockabilly", "cabaret", "karaoke", "opera", "folk", "mariachi", "zydeco", "techno", "jazz"];
+
+// This function selects a random value from the array
 
 let select = arr => {
 let randNum=Math.floor(Math.random() * arr.length);
@@ -17,13 +19,14 @@ console.log(randNum)
 let selection = arr[randNum];
 return selection;
 };
-
+// This determins what sentence gets displayed and thus which arrays are used
 let phraseSelect = Math.round(Math.random());
 console.log(phraseSelect)
 
 if(phraseSelect === 0){
 let thing1=select(actions);
 let thing2=select(places);
+// Because this sentence in particular has an a/an situation, we need to check if the first letter of the place is a vowel
 let vowelCheck = str =>{
   console.log(str.substring(0,1))
   if(str.substring(0,1) === "a"||str.substring(0,1) === "e"||str.substring(0,1) === "i"||str.substring(0,1) === "o"||str.substring(0,1) === "u"){
