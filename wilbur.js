@@ -20,9 +20,9 @@ let selection = arr[randNum];
 return selection;
 };
 // This determins what sentence gets displayed and thus which arrays are used
-let phraseSelect = Math.round(Math.random());
 
-if(phraseSelect === 0){
+$("#arrive").on("click", function(e){
+  e.preventDefault()
 let thing1=select(actions);
 let thing2=select(places);
 // Because this sentence in particular has an a/an situation, we need to check if the first letter of the place is a vowel
@@ -39,10 +39,10 @@ if(isVowel === true){
 }else{
 $("#message").html(`Touchdown like ${thing1} in a ${thing2}--we are parked and proud!`);
 }
-}
-else{
-  // let thing1=select(sweets);
-  // let thing2=select(activities);
-$("#message").html(`Trainwreck ${select(sweets)} is reporting tango ${select(activities)} is go.`);
-};
-console.log(`Bellbottom ${select(musicStyles)} this is stovetop ${select(places)}, do you require assistance? Over.`)
+})
+// {
+//   let thing1=select(sweets);
+//   let thing2=select(activities);
+// $("#message").html(`Trainwreck ${thing1} is reporting tango ${thing2} is go.`);
+// };
+// console.log(`Bellbottom ${select(musicStyles)} this is stovetop ${select(places)}, do you require assistance? Over.`)
