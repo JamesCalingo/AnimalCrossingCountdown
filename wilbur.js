@@ -6,7 +6,7 @@ const dialogue={
  places: ["toothbrush", "glasses case", "pocketbook", "microphone", "photo album", "microscope", "hand mirror", "change jar", "fitted sheet", "leg warmer", "blue crayon", "calculator", "saltshaker", "electric razor", "jewelry box", "ballpoint pen", "inkjet printer", "jackhammer", 
 "beach towel", "pencil case", "pack of gum", "glockenspiel", "kaleidoscope", "rubber band", "water bottle", "compost bin", "cotton swab", "toaster oven", "wristwatch", "mountain bike", "blowtorch", "tambourine", "picnic basket", "stethoscope", "paperweight", "pocketknife", "screwdriver", "pomade tin", "camera case", "water wing", "baking sheet", "space heater", "mixing bowl", "potpourri jar", "walking stick", "snowmobile", "socket wrench", "handkerchief", "encyclopedia", "megaphone", "wallet chain", "wall calendar"],
 
-sweets : ["almond jelly", "gingerbread", "shaved ice", "cotton candy", "apple cobbler", "fried dough", "Bavarian cream", "rainbow sherbet", "key-lime pie", "apple cake", "peach cobbler", "tarte tatin", "crème brûlée", "coffee cake", "pumpkin pie", "coconut cream pie", "peanut brittle", "cheesecake", "spice cake", "fried ice cream", "bread pudding", "figgy pudding", "vanilla gelato", "banana bread", "apple strudel", "sponge cake", "rice pudding", "raisin bread", "mint ice cream", "lime sherbet", "blueberry pie", "bûche de Noël", "lemon sorbet", "frozen parfait", "coconut cake", "crème caramel", "shortbread", "carrot cake",  "yogurt parfait", "fruit parfait", "moon cake", "french toast", "baked Alaska"],
+desserts: ["almond jelly", "gingerbread", "shaved ice", "cotton candy", "apple cobbler", "fried dough", "Bavarian cream", "rainbow sherbet", "key-lime pie", "apple cake", "peach cobbler", "tarte tatin", "crème brûlée", "coffee cake", "pumpkin pie", "coconut cream pie", "peanut brittle", "cheesecake", "spice cake", "fried ice cream", "bread pudding", "figgy pudding", "vanilla gelato", "banana bread", "apple strudel", "sponge cake", "rice pudding", "raisin bread", "mint ice cream", "lime sherbet", "blueberry pie", "bûche de Noël", "lemon sorbet", "frozen parfait", "coconut cake", "crème caramel", "shortbread", "carrot cake",  "yogurt parfait", "fruit parfait", "moon cake", "french toast", "baked Alaska", "chocolate pie"],
 
  activities:["hula dancing", "golf", "tap dancing", "cricket", "badminton", "archery", "muay thai", "arm wrestling", "wrestling", "power lifting", "hockey", "step aerobics", "kung fu", "boxing", "water skiing", "basketball", "soccer", "racquetball", "swimming", "football", "bodybuilding", "rugby", "hot yoga", "ice skating", "curling", "baseball", "canoeing", "karate", "bocce", "bowling", "volleyball", "surfing", "capoeira", "tennis", "roller skating", "skateboarding", "table tennis", "tae kwon do", "snooker"],
 
@@ -45,7 +45,7 @@ $("#depart").on("click", function(e){
   e.preventDefault();
   let phrasePick = Math.round(Math.random());
   if(phrasePick === 1){
-  let thing1=select(dialogue.sweets);
+  let thing1=select(dialogue.desserts);
   let thing2=select(dialogue.activities);
 $("#message").html(`Trainwreck ${thing1} is reporting tango ${thing2} is go.`);}
 else{
