@@ -1,9 +1,12 @@
-// This file contains everything pertaining to Wilbur. These arrays are the various diologue options he has
+// This file contains everything pertaining to Wilbur. These arrays are the various dialogue options he has
 
-const dialogue={ actions: ["eating spicy food", "flamenco dancing", "collecting stamps", "surfing the web", "fixing things", "window shopping", "woodworking", "collecting figurines", "reading fortunes", "making playlists", "watching movies", "learning languages", "taking long naps", "watching trash TV", "practicing kung fu", "growing vegetables", "eating free pizza", "making mosaics", "bungee jumping", "clipping coupons", "watching trains", "scrapbooking", "doing brainteasers", "building models", "learning new stuff", "reading novels", "doing magic tricks", "playing card games", "break dancing", "doing paper crafts", "boogie boarding", "playing the kazoo", "playing the drums", "playing lacrosse", "polishing rocks"],
+const dialogue={
+  actions: ["eating spicy food", "flamenco dancing", "collecting stamps", "surfing the web", "fixing things", "window shopping", "woodworking", "collecting figurines", "reading fortunes", "making playlists", "watching movies", "learning languages", "taking long naps", "watching trash TV", "practicing kung fu", "growing vegetables", "eating free pizza", "making mosaics", "bungee jumping", "clipping coupons", "watching trains", "scrapbooking", "doing brainteasers", "building models", "learning new stuff", "reading novels", "doing magic tricks", "playing card games", "break dancing", "doing paper crafts", "boogie boarding", "playing the kazoo", "playing the drums", "playing lacrosse", "polishing rocks"],
 
  places: ["toothbrush", "glasses case", "pocketbook", "microphone", "photo album", "microscope", "hand mirror", "change jar", "fitted sheet", "leg warmer", "blue crayon", "calculator", "saltshaker", "electric razor", "jewelry box", "ballpoint pen", "inkjet printer", "jackhammer", 
-"beach towel", "pencil case", "pack of gum", "glockenspiel", "kaleidoscope", "rubber band", "water bottle", "compost bin", "cotton swab", "toaster oven", "wristwatch", "mountain bike", "blowtorch", "tambourine", "picnic basket", "stethoscope", "paperweight", "pocketknife", "screwdriver", "pomade tin", "camera case", "water wing", "baking sheet", "space heater", "mixing bowl", "potpourri jar", "walking stick", "snowmobile", "socket wrench", "handkerchief", "encyclopedia", "megaphone", "wallet chain", "wall calendar"],sweets : ["almond jelly", "gingerbread", "shaved ice", "cotton candy", "apple cobbler", "fried dough", "Bavarian cream", "rainbow sherbet", "key-lime pie", "apple cake", "peach cobbler", "tarte tatin", "crème brûlée", "coffee cake", "pumpkin pie", "coconut cream pie", "peanut brittle", "cheesecake", "spice cake", "fried ice cream", "bread pudding", "figgy pudding", "vanilla gelato", "banana bread", "apple strudel", "sponge cake", "rice pudding", "raisin bread", "mint ice cream", "lime sherbet", "blueberry pie", "bûche de Noël", "lemon sorbet", "frozen parfait", "coconut cake", "crème caramel", "shortbread", "carrot cake",  "yogurt parfait", "fruit parfait", "moon cake", "french toast"],
+"beach towel", "pencil case", "pack of gum", "glockenspiel", "kaleidoscope", "rubber band", "water bottle", "compost bin", "cotton swab", "toaster oven", "wristwatch", "mountain bike", "blowtorch", "tambourine", "picnic basket", "stethoscope", "paperweight", "pocketknife", "screwdriver", "pomade tin", "camera case", "water wing", "baking sheet", "space heater", "mixing bowl", "potpourri jar", "walking stick", "snowmobile", "socket wrench", "handkerchief", "encyclopedia", "megaphone", "wallet chain", "wall calendar"],
+
+sweets : ["almond jelly", "gingerbread", "shaved ice", "cotton candy", "apple cobbler", "fried dough", "Bavarian cream", "rainbow sherbet", "key-lime pie", "apple cake", "peach cobbler", "tarte tatin", "crème brûlée", "coffee cake", "pumpkin pie", "coconut cream pie", "peanut brittle", "cheesecake", "spice cake", "fried ice cream", "bread pudding", "figgy pudding", "vanilla gelato", "banana bread", "apple strudel", "sponge cake", "rice pudding", "raisin bread", "mint ice cream", "lime sherbet", "blueberry pie", "bûche de Noël", "lemon sorbet", "frozen parfait", "coconut cake", "crème caramel", "shortbread", "carrot cake",  "yogurt parfait", "fruit parfait", "moon cake", "french toast", "baked Alaska"],
 
  activities:["hula dancing", "golf", "tap dancing", "cricket", "badminton", "archery", "muay thai", "arm wrestling", "wrestling", "power lifting", "hockey", "step aerobics", "kung fu", "boxing", "water skiing", "basketball", "soccer", "racquetball", "swimming", "football", "bodybuilding", "rugby", "hot yoga", "ice skating", "curling", "baseball", "canoeing", "karate", "bocce", "bowling", "volleyball", "surfing", "capoeira", "tennis", "roller skating", "skateboarding", "table tennis", "tae kwon do", "snooker"],
 
@@ -39,9 +42,16 @@ $("#message").html(`Touchdown like ${thing1} in a ${thing2}--we are parked and p
 }
 })
 $("#depart").on("click", function(e){
-  e.preventDefault()
+  e.preventDefault();
+  let phrasePick = Math.round(Math.random());
+  if(phrasePick === 1){
   let thing1=select(dialogue.sweets);
   let thing2=select(dialogue.activities);
-$("#message").html(`Trainwreck ${thing1} is reporting tango ${thing2} is go.`);
+$("#message").html(`Trainwreck ${thing1} is reporting tango ${thing2} is go.`);}
+else{
+  let thing1=select(dialogue.musicStyles);
+  let thing2=select(dialogue.places);
+  $("#message").html(`Bellbottom ${thing1} this is pocket ${thing2}, do you require assistance?`)
+}
 }
 )
